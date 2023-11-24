@@ -62,13 +62,13 @@
       btn.classList.add("btn");
       btn.innerText = sound;
       btn.addEventListener("click", () => {
-        stopSongs();
+        pauseSongs();
         document.getElementById(sound).play();
       });
       document.getElementById("buttons").appendChild(btn);
     });
 
-    function stopSongs() {
+    function pauseSongs() {
       sounds.forEach((sound) => {
         const song = document.getElementById(sound);
         song.pause();
